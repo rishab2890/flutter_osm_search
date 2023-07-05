@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:open_street_map_search_and_pick/open_street_map_search_and_pick.dart';
+import 'package:flutter_osm_search/flutter_osm_search.dart';
 
 void main() {
   // test('adds one to input values', () {

@@ -8,7 +8,7 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:http/http.dart' as http;
 import 'package:latlong2/latlong.dart';
 
-import 'package:open_street_map_search_and_pick/widgets/wide_button.dart';
+import 'package:flutter_osm_search/widgets/wide_button.dart';
 
 class OpenStreetMapSearchAndPick extends StatefulWidget {
   final LatLong center;
@@ -20,6 +20,7 @@ class OpenStreetMapSearchAndPick extends StatefulWidget {
   final Color buttonColor;
   final Color buttonTextColor;
   final Color locationPinIconColor;
+  final Color txtFiledColor;
   final String buttonText;
   final String hintText;
 
@@ -31,8 +32,8 @@ class OpenStreetMapSearchAndPick extends StatefulWidget {
     Key? key,
     required this.center,
     required this.onPicked,
-    this.zoomOutIcon =  Icons.zoom_out_map,
-    this.zoomInIcon =Icons.zoom_in_map,
+    this.zoomOutIcon = Icons.zoom_out_map,
+    this.zoomInIcon = Icons.zoom_in_map,
     this.currentLocationIcon = Icons.my_location,
     this.onGetCurrentLocationPressed = nopFunction,
     this.buttonColor = Colors.blue,
@@ -40,6 +41,7 @@ class OpenStreetMapSearchAndPick extends StatefulWidget {
     this.buttonTextColor = Colors.white,
     this.buttonText = 'Set Current Location',
     this.hintText = 'Search Location',
+    required this.txtFiledColor,
   }) : super(key: key);
 
   @override
@@ -194,7 +196,7 @@ class _OpenStreetMapSearchAndPickState
                       _mapController.center, _mapController.zoom + 1);
                 },
                 child: Icon(
-                widget.zoomInIcon,
+                  widget.zoomInIcon,
                   color: widget.buttonTextColor,
                 ),
               )),
@@ -209,7 +211,7 @@ class _OpenStreetMapSearchAndPickState
                       _mapController.center, _mapController.zoom - 1);
                 },
                 child: Icon(
-                widget.zoomOutIcon,
+                  widget.zoomOutIcon,
                   color: widget.buttonTextColor,
                 ),
               )),
@@ -235,7 +237,7 @@ class _OpenStreetMapSearchAndPickState
                   }
                 },
                 child: Icon(
-                widget.currentLocationIcon ,
+                  widget.currentLocationIcon,
                   color: widget.buttonTextColor,
                 ),
               )),
@@ -252,6 +254,10 @@ class _OpenStreetMapSearchAndPickState
               child: Column(
                 children: [
                   TextFormField(
+                      style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                            color: widget.txtFiledColor,
+                            fontWeight: FontWeight.bold,
+                          ),
                       controller: _searchController,
                       focusNode: _focusNode,
                       decoration: InputDecoration(

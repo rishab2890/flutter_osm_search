@@ -29,7 +29,7 @@ This lib was designed to use open street map to set location on Flutter applicat
 Import the following package in your dart file
 
 ```dart
-import 'package:open_street_map_search_and_pick/open_street_map_search_and_pick.dart';
+import 'package:flutter_osm_search/flutter_osm_search.dart';
 ```
 
 To use is simple, just call the widget bellow. You need to pass the default center position of the map and a onPicked method to get the picked position from the map.
@@ -84,7 +84,7 @@ Click on the image below to view a video tutorial. It will redirect you to a you
 
 # Contributors
 
-<a href="https://github.com/AbduzZami"><img src="https://avatars.githubusercontent.com/u/69592754?v=4" title="AbduzZami" width="80" height="80"></a>
+<a href="https://github.com/rishab2890"><img src="https://avatars.githubusercontent.com/u/69592754?v=4" title="rishab2890" width="80" height="80"></a>
 <a href="https://github.com/ZdenekKrcal"><img src="https://avatars.githubusercontent.com/u/51366376?v=4" title="ZdenekKrcal" width="80" height="80"></a>
 <a href="https://github.com/FlorianPix"><img src="https://avatars.githubusercontent.com/u/34790464?v=4" title="FlorianPix" width="80" height="80"></a>
 <a href="https://github.com/A7MeDG0L0L"><img src="https://avatars.githubusercontent.com/u/33913003?v=4" title="Ahmed Galal" width="80" height="80"></a>

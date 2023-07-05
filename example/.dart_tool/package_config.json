@@ -176,7 +176,7 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "open_street_map_search_and_pick",
+      "name": "flutter_osm_search",
       "rootUri": "../../",
       "packageUri": "lib/",
       "languageVersion": "2.17"
